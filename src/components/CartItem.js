@@ -20,7 +20,7 @@ const CartItem = ({ item, itemIndex }) => {
         <div className="md:ml-10 self-start space-y-5 w-[100%] md:w-[70%]">
           <h1 className="text-xl text-slate-700 font-semibold">{item.title}</h1>
           <h1 className="text-base text-slate-700 font-medium">
-            {item.description}
+            {item.description.split(" ").slice(0, 10).join(" ") + "..."}
           </h1>
           <div className="flex items-center justify-between">
             <p className="font-bold text-lg text-green-600">${item.price}</p>
